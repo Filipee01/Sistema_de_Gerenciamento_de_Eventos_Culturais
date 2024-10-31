@@ -23,7 +23,7 @@ string Artista::get_nome() const {
  */
 void Artista::set_idade(int idade) {
   if (idade < 0)
-    throw invalid_argument("Idade não pode ser negativa");
+    throw invalid_argument("Idade nao pode ser negativa");
   idade_do_artista = idade;
 }
 

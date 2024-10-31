@@ -4,7 +4,6 @@
 #include "evento.h"
 #include <vector>
 
-
 /**
  * @class GerenciadorDeEventos
  * @brief Classe que gerencia uma lista de eventos culturais.
@@ -41,6 +40,18 @@ public:
    * @return Lista de eventos.
    */
   std::vector<Evento *> &get_lista_de_eventos();
+
+  /**
+   * @brief Sobrecarga do operador + para adicionar um evento à lista.
+   * @param evento Evento a ser adicionado.
+   */
+  void operator+(Evento *evento);
+
+  /**
+   * @brief Sobrecarga do operador - para remover um evento da lista.
+   * @param evento Evento a ser removido.
+   */
+  void operator-(Evento *evento);
 };
 
 #endif // GERENCIADOR_DE_EVENTOS_H

@@ -49,3 +49,19 @@ void GerenciadorDeEventos::listar_eventos() const {
 std::vector<Evento *> &GerenciadorDeEventos::get_lista_de_eventos() {
   return lista_de_eventos;
 }
+
+/**
+ * @brief Sobrecarga do operador + para adicionar um evento à lista.
+ * @param evento Evento a ser adicionado.
+ */
+void GerenciadorDeEventos::operator+(Evento *evento) {
+  adicionar_evento(evento);
+}
+
+/**
+ * @brief Sobrecarga do operador - para remover um evento da lista.
+ * @param evento Evento a ser removido.
+ */
+void GerenciadorDeEventos::operator-(Evento *evento) {
+  remover_evento(evento);
+}

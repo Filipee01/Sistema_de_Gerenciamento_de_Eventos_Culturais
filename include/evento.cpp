@@ -28,7 +28,7 @@ string Evento::get_nome() const {
  * @throw std::invalid_argument Se a idade for negativa.
  */
 void Evento::set_idade(int idade) {
-    if (idade < 0) throw invalid_argument("Idade não pode ser negativa");
+    if (idade < 0) throw invalid_argument("Idade nao pode ser negativa");
     idade_do_evento = idade;
 }
 
