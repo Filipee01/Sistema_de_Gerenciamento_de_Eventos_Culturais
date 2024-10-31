@@ -1,10 +1,16 @@
 #include "evento.h"
-#include <algorithm>
-#include <stdexcept>
 
-using std::invalid_argument;
-using std::string;
-
+/**
+ * @brief Construtor da classe Evento.
+ * @param nome Nome do evento.
+ * @param idade Idade do evento.
+ * @throw invalid_argument Se a idade for negativa.
+ */
+Evento::Evento(const string& nome, int idade) {
+    if (idade < 0) throw invalid_argument("Idade nao pode ser negativa");
+    nome_do_evento = nome;
+    idade_do_evento = idade;
+}
 
 /**
  * @brief Define o nome do evento.
@@ -25,7 +31,7 @@ string Evento::get_nome() const {
 /**
  * @brief Define a idade do evento.
  * @param idade Idade do evento.
- * @throw std::invalid_argument Se a idade for negativa.
+ * @throw invalid_argument Se a idade for negativa.
  */
 void Evento::set_idade(int idade) {
     if (idade < 0) throw invalid_argument("Idade nao pode ser negativa");
@@ -44,7 +50,7 @@ int Evento::get_idade() const {
  * @brief Obtém a lista de artistas do evento.
  * @return Referência constante à lista de artistas.
  */
-const std::vector<Artista>& Evento::get_artistas() const {
+const vector<Artista>& Evento::get_artistas() const {
     return lista_de_artistas;
 }
 

@@ -102,6 +102,7 @@ Ao executar o programa, as mensagens de criação e destruição dos objetos ser
 
 `-----------------------`
 
+
 Menu:
 1. Adicionar Evento
 2. Remover Evento
@@ -116,9 +117,9 @@ Menu:
 
 Escolha uma opcao: 1
 Tipo de Evento (1-Show, 2-Exposicao): 1
-Genero Musical: rock
 Nome do Evento: Rock in Rio
-Idade do Evento: 12
+Idade do Evento: 22
+Genero Musical: rock
 Evento Rock in Rio criado!
 
 `-----------------------`
@@ -138,7 +139,7 @@ Menu:
 Escolha uma opcao: 4
 Nome do Evento: Rock in Rio
 Nome do Artista: Iron Maiden
-Idade do Artista: 45
+Idade do Artista: 44
 Artista Iron Maiden adicionado ao evento Rock in Rio!
 
 `-----------------------`
@@ -155,50 +156,8 @@ Menu:
 
 `-----------------------`
 
-Escolha uma opcao: 1
-Tipo de Evento (1-Show, 2-Exposicao): 2
-Tipo de Arte: tecnologia
-Nome do Evento: ExpoCenter
-Idade do Evento: 15
-Evento ExpoCenter criado!
-
-`-----------------------`
-
-Menu:
-1. Adicionar Evento
-2. Remover Evento
-3. Listar Eventos
-4. Adicionar Artista a Evento
-5. Remover Artista de Evento
-6. Listar Artistas de Evento
-7. Listar Eventos com Precos
-0. Sair
-
-`-----------------------`
-
 Escolha uma opcao: 3
-Evento: Rock in Rio, Idade: 12, Genero Musical: rock
-Evento: ExpoCenter, Idade: 15, Tipo de Arte: tecnologia
-
-`-----------------------`
-
-Menu:
-1. Adicionar Evento
-2. Remover Evento
-3. Listar Eventos
-4. Adicionar Artista a Evento
-5. Remover Artista de Evento
-6. Listar Artistas de Evento
-7. Listar Eventos com Precos
-0. Sair
-
-`-----------------------`
-
-Escolha uma opcao: 4
-Nome do Evento: ExpoCenter
-Nome do Artista: Bidu
-Idade do Artista: 33
-Artista Bidu adicionado ao evento ExpoCenter!
+Evento: Rock in Rio, Idade: 22, Genero Musical: rock
 
 `-----------------------`
 
@@ -215,8 +174,8 @@ Menu:
 `-----------------------`
 
 Escolha uma opcao: 6
-Nome do Evento: ExpoCenter
-Artista: Bidu, Idade: 33
+Nome do Evento: Rock in Rio
+Artista: Iron Maiden, Idade: 44
 
 `-----------------------`
 
@@ -233,9 +192,9 @@ Menu:
 `-----------------------`
 
 Escolha uma opcao: 5
-Nome do Evento: ExpoCenter
-Nome do Artista a remover: Bidu
-Artista Bidu removido do evento ExpoCenter!
+Nome do Evento: Rock in Rio
+Nome do Artista a remover: Iron Maiden
+Artista Iron Maiden removido do evento Rock in Rio!
 
 `-----------------------`
 
@@ -251,43 +210,9 @@ Menu:
 
 `-----------------------`
 
-Escolha uma opcao: 2
-Nome do Evento a remover: ExpoCenter
-Evento ExpoCenter removido!
-
-`-----------------------`
-
-Menu:
-1. Adicionar Evento
-2. Remover Evento
-3. Listar Eventos
-4. Adicionar Artista a Evento
-5. Remover Artista de Evento
-6. Listar Artistas de Evento
-7. Listar Eventos com Precos
-0. Sair
-
-`-----------------------`
-
-Escolha uma opcao: 3
-Evento: Rock in Rio, Idade: 12, Genero Musical: rock
-
-`-----------------------`
-
-Menu:
-1. Adicionar Evento
-2. Remover Evento
-3. Listar Eventos
-4. Adicionar Artista a Evento
-5. Remover Artista de Evento
-6. Listar Artistas de Evento
-7. Listar Eventos com Precos
-0. Sair
-
-`-----------------------`
-
-Escolha uma opcao: 7
-Evento: Rock in Rio, Idade: 12, Preco: 110, Genero Musical: rock
+Escolha uma opcao: 6
+Nome do Evento: Rock in Rio
+Nenhum artista cadastrado no evento Rock in Rio.
 
 `-----------------------`
 
@@ -338,8 +263,31 @@ Menu:
 
 `-----------------------`
 
-Escolha uma opcao: 0
-Saindo...
+Escolha uma opcao: 7
+Nenhum evento cadastrado.
+
+`-----------------------`
+
+Menu:
+1. Adicionar Evento
+2. Remover Evento
+3. Listar Eventos
+4. Adicionar Artista a Evento
+5. Remover Artista de Evento
+6. Listar Artistas de Evento
+7. Listar Eventos com Precos
+0. Sair
+
+`-----------------------`
+
+`caso coloque uma idade negativa`
+
+Escolha uma opcao: 1
+Tipo de Evento (1-Show, 2-Exposicao): 1
+Nome do Evento: Show time
+Idade do Evento: -27
+Genero Musical: rock
+Erro: Idade nao pode ser negativa
 
 
 ## Autor

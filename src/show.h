@@ -15,6 +15,15 @@ private:
 
 public:
   /**
+   * @brief Construtor da classe Show.
+   * @param nome Nome do evento.
+   * @param idade Idade do evento.
+   * @param genero Gênero musical do show.
+   * @throw invalid_argument Se a idade for negativa.
+   */
+  Show(const string& nome, int idade, const string& genero): Evento(nome, idade), genero_musical(genero) {}
+
+  /**
    * @brief Define o gênero musical do show.
    * @param g Gênero musical.
    */

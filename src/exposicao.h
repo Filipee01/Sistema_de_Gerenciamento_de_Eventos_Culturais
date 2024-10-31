@@ -15,6 +15,15 @@ private:
 
 public:
   /**
+   * @brief Construtor da classe Exposicao.
+   * @param nome Nome do evento.
+   * @param idade Idade do evento.
+   * @param tipo Tipo de arte da exposição.
+   * @throw invalid_argument Se a idade for negativa.
+   */
+  Exposicao(const string& nome, int idade, const string& tipo): Evento(nome, idade), tipo_de_arte(tipo) {}
+
+  /**
    * @brief Define o tipo de arte da exposição.
    * @param t Tipo de arte.
    */

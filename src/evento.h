@@ -4,6 +4,12 @@
 #include "artista.h"
 #include <vector>
 #include <string>
+#include <stdexcept>
+#include <algorithm>
+
+using std::invalid_argument;
+using std::string;
+using std::vector;
 
 /**
  * @class Evento
@@ -17,9 +23,17 @@ class Evento {
 protected:
     string nome_do_evento; ///< Nome do evento
     int idade_do_evento; ///< Idade do evento (tempo desde a criação)
-    std::vector<Artista> lista_de_artistas; ///< Lista de artistas do evento
+    vector<Artista> lista_de_artistas; ///< Lista de artistas do evento
 
 public:
+    /**
+     * @brief Construtor da classe Evento.
+     * @param nome Nome do evento.
+     * @param idade Idade do evento.
+     * @throw invalid_argument Se a idade for negativa.
+     */
+    Evento(const string& nome, int idade);
+
     /**
      * @brief Destrutor virtual.
      */
@@ -35,12 +49,12 @@ public:
      * @brief Obtém o nome do evento.
      * @return Nome do evento.
      */
-    std::string get_nome() const;
+    string get_nome() const;
 
     /**
      * @brief Define a idade do evento.
      * @param idade Idade do evento.
-     * @throw std::invalid_argument Se a idade for negativa.
+     * @throw invalid_argument Se a idade for negativa.
      */
     void set_idade(int idade);
 
@@ -54,7 +68,7 @@ public:
      * @brief Obtém a lista de artistas do evento.
      * @return Referência constante à lista de artistas.
      */
-    const std::vector<Artista>& get_artistas() const;
+    const vector<Artista>& get_artistas() const;
 
     /**
      * @brief Método virtual puro para calcular o preço do evento.
