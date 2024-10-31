@@ -101,6 +101,7 @@ Ao executar o programa, as mensagens de criação e destruição dos objetos ser
 ### Exemplo de Saída Esperada:
 
 `-----------------------`
+
 Menu:
 1. Adicionar Evento
 2. Remover Evento
