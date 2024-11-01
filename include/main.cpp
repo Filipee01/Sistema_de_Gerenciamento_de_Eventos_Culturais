@@ -55,6 +55,10 @@ int main() {
                     cin >> idade;
                     cin.ignore(); 
 
+                    if (idade < 0) {
+                        throw invalid_argument("Idade nao pode ser negativa");
+                    }
+
                     if (tipo_evento == 1) {
                         string genero_musical;
                         cout << "Genero Musical: ";
@@ -86,8 +90,8 @@ int main() {
                                            [&nome](Evento* evento) { return evento->get_nome() == nome; });
 
                     if (it != lista_de_eventos.end()) {
-                        gerenciador.remover_evento(*it);
-                        delete *it;
+                        delete *it; // Libera a memória do evento
+                        lista_de_eventos.erase(it); // Remove o evento da lista
                         cout << "Evento " << nome << " removido!" << endl;
                     } else {
                         throw invalid_argument("Evento nao encontrado!");
